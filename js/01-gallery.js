@@ -46,9 +46,17 @@ gallery.addEventListener('click', e => {
   instance.show();
 
   // Closing by Escape
-  gallery.addEventListener('keydown', e => {
+
+  const closeByEsc = e => {
     if (e.key === 'Escape') {
       instance.close();
     }
-  });
+  };
+  gallery.addEventListener('keydown', closeByEsc);
+
+  // gallery.addEventListener('keydown', e => {
+  //   if (e.key === 'Escape') {
+  //     instance.close();
+  //   }
+  // });
 });
